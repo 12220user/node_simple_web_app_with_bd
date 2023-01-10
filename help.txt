@@ -1,0 +1,10 @@
+Использованные технологии
+node js & js
+    express
+    nodemon
+    vie
+    jqerry
+bd
+    postgres sql
+html
+css
