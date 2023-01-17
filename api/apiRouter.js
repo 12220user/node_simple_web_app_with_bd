@@ -71,7 +71,7 @@ module.exports = {
             })
         })
         app.get('/api/records', (req, res) => {
-            bd.query(`SELECT * FROM records WHERE status = 3`, (err, result, fields) => {
+            bd.query(`SELECT * FROM records WHERE status = 2`, (err, result, fields) => {
                 res.json(result)
             })
         })
@@ -96,7 +96,6 @@ module.exports = {
                     UPDATE records SET
                         name='${req.body.name}',
                         author='${req.body.author}',
-                        
                         dateChange='${new Date().yyyymmdd()}',
                         status='${req.body.status}',
                         RecordData='${req.body.RecordData}' 

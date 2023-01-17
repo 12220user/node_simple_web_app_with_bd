@@ -32,11 +32,33 @@
         <div class="page" id="main">
             <div class="filter_and_search_block">
                 <input type="text" id="search_input">
-                <button style="width: 70px; height: 25px; font-size: 14px; display: flex; align-items: center; justify-content: center;">ПОИСК</button>
-            </div>
-            <div class="page_content">
+                <p style="margin-left:10px; margin-right: 10px;">Сортировать</p>
+                <select name="" id="status">
+                    <option value="">Без фильтра</option>
+                    <option value="name">По названию</option>
+                    <option value="author">По автору</option>
+                    <option value="date">По дате выхода</option>
+                    <option value="dateChange">По дате изменения</option>
+                </select>
 
+                <button style="width: 70px; height: 25px; font-size: 14px; display: flex; align-items: center; justify-content: center;" onclick="updateByFilters()">ПОИСК</button>
+            </div>
+            <div class="page_content" id="records_container">
                 <br>
+                <div class="record">
+                    <h1>Название : <span style="color: rgb(1, 64, 146)">Автор</span></h1>
+                    <p>11.11.2022</p>
+                    <button onclick="openRecord('')">Открыть</button>
+                </div>
+                <div class="record">
+
+                </div>
+                <div class="record">
+
+                </div>
+                <div class="record">
+
+                </div>
             </div>
 
         </div>
@@ -53,6 +75,21 @@
                 Работает ресурс на базе сервера node.js с использованием базы данных MySql.
 
             </p>
+        </div>
+
+        <div class="frame hide" id="record_frame">
+            <div class="cancelButton cbPos_tr" onclick="CloseFrameEvent('#record_frame')"></div>
+
+            <div class="ckrolled">
+                <H1 id="rf_name">Название</H1>
+                <H2 id="rf_author">Автор</H2>
+                <p id="rf_date">11.11.2022</p>
+                <br><br>
+                <div id="rf_content">
+                    Содержание
+                </div>
+            </div>
+
         </div>
         <!---->
 
@@ -92,10 +129,12 @@
     </div>
     <script src="./js/imported/vue.js"></script>
     <script src="./js/imported/jqerry.js"></script>
+    <script src="./js/request.js"></script>
     <script src="./js/vue-controler.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/gallerey.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/record_view.js"></script>
     <script>
     </script>
 </body>

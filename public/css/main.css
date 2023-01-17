@@ -1,22 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: rgb(148, 148, 148);
     font-family: 'Roboto', sans-serif;
-
 }
-a{
+
+a {
     color: rgb(130, 130, 245);
     border: none;
     text-decoration: none;
     transition: .3s;
 }
-a:hover{
+
+a:hover {
     color: rgb(170, 170, 253);
 }
 
-
-#background{
+#background {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,22 +29,21 @@ a:hover{
     background-image: url('../source/img/background.gif');
     background-size: 100% 100%;
 }
-.background_effects{
+
+.background_effects {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -9;
-    background: rgb(129,86,142);
+    background: rgb(129, 86, 142);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.548) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-#app{
-    
-}
+#app {}
 
-header{
+header {
     position: absolute;
     height: 60px;
     background-color: rgba(27, 27, 27, 0.801);
@@ -52,7 +51,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    top:20px;
+    top: 20px;
     padding-left: 20px;
     margin-left: 1%;
     border-radius: 20px;
@@ -61,35 +60,38 @@ header{
     color: azure;
     z-index: 10;
 }
-header h2{
+
+header h2 {
     line-clamp: 1;
 }
 
-#header-more{
+#header-more {
     margin-left: 20px;
     width: 20px;
     height: 20px;
     font-size: 22px;
-    transform: rotate(90deg) translate(4px , 6px);
+    transform: rotate(90deg) translate(4px, 6px);
     transition: .1s;
     cursor: pointer;
     position: absolute;
-    right: 5px ;
+    right: 5px;
 }
-.header-fixed{
+
+.header-fixed {
     position: fixed;
     padding-left: 20px;
-    
     margin-left: 1%;
 }
 
-#header-more:hover{
+#header-more:hover {
     color: white;
 }
-.maxed{
+
+.maxed {
     width: 98%;
 }
-header .h_nav_a{
+
+header .h_nav_a {
     display: none;
     width: 0;
     height: 0;
@@ -101,25 +103,23 @@ header .h_nav_a{
     font-size: 25px;
     line-clamp: 1;
 }
-.maxed .h_nav_a{
+
+.maxed .h_nav_a {
     height: auto;
     opacity: 1;
     width: auto;
     display: block;
     cursor: pointer;
 }
-.h_nav_a:hover{
+
+.h_nav_a:hover {
     color: rgb(130, 130, 245);
     border: none;
     text-decoration: none;
     transition: .3s;
 }
 
-
-
-
-
-.page{
+.page {
     width: 90%;
     margin-top: 100px;
     margin-left: 5%;
@@ -128,14 +128,19 @@ header .h_nav_a{
     display: flex;
     flex-direction: column;
 }
-.page_content{
+
+.page_content {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-.right_page{
+
+.right_page {
     width: 20%;
 }
 
-footer{
+footer {
     position: static;
     left: 0;
     right: 0;
@@ -150,19 +155,28 @@ footer{
     justify-content: center;
     backdrop-filter: blur(3px);
 }
-footer div{
+
+footer div {
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-footer div *{
+
+footer div * {
     margin-bottom: 5px;
 }
 
+.ckrolled {
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.frame{
+.frame {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,11 +194,11 @@ footer div *{
     z-index: 20;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.cancelButton{
+.cancelButton {
     width: 60px;
     height: 60px;
     background-image: url('../source/svg/cancel.svg');
@@ -192,71 +206,92 @@ footer div *{
     transition: .2s;
 }
 
-.cancelButton:hover{
+.cancelButton:hover {
     transform: scale(1.07);
 }
 
-.cbPos_tl{
+.cbPos_tl {
     position: absolute;
     top: 10px;
     left: 10px;
 }
-.cbPos_tr{
+
+.cbPos_tr {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-.cbPos_bl{
+
+.cbPos_bl {
     position: absolute;
     bottom: 10px;
     left: 10px;
 }
-.cbPos_br{
+
+.cbPos_br {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0px;
 }
 
-
-
-
 @media screen and (max-width:600px) {
-    .maxed{
+    .maxed {
         padding-top: 20px;
         flex-direction: column;
         width: 98%;
         height: auto;
         padding-bottom: 20px;
     }
-
-    #background{
+    #background {
         background-size: auto 100%;
     }
-    footer{
+    footer {
         flex-direction: column;
         height: auto;
         align-items: center;
         padding-bottom: 40px;
     }
-    footer div{
+    footer div {
         margin-top: 20px;
     }
 }
-
 
 @media screen and (max-width:1000px) {
-    footer{
+    footer {
         flex-direction: column;
         height: auto;
         align-items: center;
         padding-bottom: 40px;
     }
-    footer div{
+    footer div {
         margin-top: 20px;
     }
 }
 
+.record {
+    width: 31%;
+    margin: 1% 1%;
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.377);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.record h1 {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.record p {
+    width: 100%;
+    text-align: center;
+}
