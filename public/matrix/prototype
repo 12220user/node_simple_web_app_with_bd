@@ -1,0 +1,14 @@
+шейдер шума перлина в виде огня или лава лампы
+let currentShader = (x, y, d, uv) => {
+    let h = noisefn(x / 8, y / 8, Date.now() / 2500)
+    if (h > .7)
+        return 'rgb(251 , 255, 0)'
+    else if (h > .5)
+        return 'rgb(251, 255, 0)'
+    else if (h > .3)
+        return 'rgb(255, 153, 0)'
+    else if (h > -.1)
+        return 'rgb(216, 70, 34)'
+    else
+        return scene.getBackground(x, y)
+}

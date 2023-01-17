@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="icon" type="image/x-icon" href="./source/img/admin.png">
+    <!--Шрифт-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+    <div class="bg">
+        <iframe src="./matrix/matrix.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <header>
+        <img src="./source/img/admin.png" alt=""> Панель администратора сервиса <a href="/">ИСС «Антивирусы-фаги»</a>
+        <div class="passblock">
+            <p id="t_pass">Текущий пароль</p>
+            <input id="passField" type="text" value="">
+            <button onclick="passwordCheck()">обновить</button>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <button onclick="OpenNewForm()">Создать запись</button>
+        <input style="margin-left: 20px;" id="serachField" type="text"><button onclick="updateSearch()">Поиск</button>
+    </div>
+
+
+
+    <div class="maincontent">
+        <p style="font-size: 24px; align-self: center;">Записи</p>
+        <div class="record_container">
+            <p>Название статьи</p>
+            <p style="color: rgb(37, 55, 172);">Автор статьи</p>
+            <p>Дата создания:</p>
+            <p>Дата изменения:</p>
+            <p>Статус:</p>
+        </div>
+        <div id="recContainer">
+            <div class="record_container">
+                <p>Название статьи</p>
+                <p style="color: rgb(37, 55, 172);">Автор статьи</p>
+                <p>Дата добавления: 11.11.2022</p>
+                <p>Дата создания: 11.11.2022</p>
+                <p>Статус: Опубликован</p>
+                <button onclick="OpenForm('1b74ff40-92bd-11ed-9e14-5511761d')">Изменить</button>
+                <button>Удалить</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="formcreate_change" style="display: none;">
+        <div class="btnClose" onclick="closeForm()"></div>
+        <div>
+            <h1 id="Method_Text">Редактирование статьи</h1>
+            <p>Имя статьи</p>
+            <input type="text" id="Name">
+            <p>Автор</p>
+            <input type="text" id="Author">
+            <p>Содержание</p>
+            <textarea name="" id="RecordData" cols="180" rows="10"></textarea>
+            <p>статус</p>
+            <select name="" id="status">
+                <option>Редактируется</option>
+                <option>Скрыто</option>
+                <option>Опубликовано</option>
+            </select>
+            <button id="submit">Сохранить</button>
+        </div>
+    </div>
+
+    <script src="./js/request.js"></script>
+    <script src="./js/admin_controler.js"></script>
+</body>
+
+</html>
